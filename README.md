@@ -4,6 +4,11 @@ Measure what proportion of your browsing is over HTTP vs. HTTPS.
 ### Installation
 Simply head on over to the [Chrome Web Store](https://chrome.google.com/webstore/detail/http-vs-https/gadbbffaagkmpmeiblocpomfnnjdddda) and install it. 
 
+### Usage
+Every website is counted uniquely, i.e. if you visit https://facebook.com twice, it will only be counted once. 
+
+To use: simply click the green lock extension icon to the right of the address bar. 
+
 ### Requirements
 Just Google Chrome!
 
