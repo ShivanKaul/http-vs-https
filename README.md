@@ -1,8 +1,8 @@
 # http-vs-https
-Measure how much of your time you spend on HTTP vs. HTTPS websites.
+Measure what proportion of your browsing is over HTTP vs. HTTPS.
 
 ### Installation
-Simply head on over to the [Chrome Web Store](https://chrome.google.com/webstore/detail/httpvhttps/gadbbffaagkmpmeiblocpomfnnjdddda) and install it. 
+Simply head on over to the [Chrome Web Store](https://chrome.google.com/webstore/detail/http-vs-https/gadbbffaagkmpmeiblocpomfnnjdddda) and install it. 
 
 ### Requirements
 Just Google Chrome!
