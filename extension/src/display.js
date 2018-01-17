@@ -1,5 +1,7 @@
 'use strict';
 
+var DEV = false;
+
 function restoreLocalStorage() {
     return new Promise(function (resolve, reject) {
         chrome.storage.sync.get({
@@ -14,19 +16,27 @@ function restoreLocalStorage() {
     });
 }
 
+function format_decimal(num) {
+   return Math.round(num).toFixed(1);
+}
+
 function display() {
     restoreLocalStorage()
         .then(storage => {
-            let http_percent = " (" + (((storage.total-storage.httpses)/storage.total) * 100) + "%)";
-            let https_percent = " (" + ((storage.httpses/storage.total) * 100) + "%)";
-            if (storage.total == 0) {
+            let http_percent_str = "";
+            let https_percent_str = "";
+            if (storage.total != 0) {
                 // Don't want to display NaNs!
-                http_percent = "";
-                https_percent = "";
+                let http_percent = format_decimal(((((storage.total-storage.httpses)/storage.total) * 100)));
+                let https_percent = format_decimal((((storage.httpses/storage.total) * 100)));
+                http_percent_str = " (" + http_percent + "%)";
+                https_percent_str = " (" + https_percent + "%)";
+                DEV && console.debug(http_percent_str);
+                DEV && console.debug(https_percent_str);
             }
             document.getElementById('time').textContent = storage.time;
-            document.getElementById('http_%').textContent = storage.total - storage.httpses + " / " + storage.total + http_percent;
-            document.getElementById('https_%').textContent = storage.httpses + " / " + storage.total + https_percent;
+            document.getElementById('http_%').textContent = storage.total - storage.httpses + " / " + storage.total + http_percent_str;
+            document.getElementById('https_%').textContent = storage.httpses + " / " + storage.total + https_percent_str;
         })
         .catch(err => console.error(err));
 }

@@ -2,7 +2,7 @@
   "name": "http-vs-https",
   "short_name": "http-vs-https",
   "description": "Ever wondered what proportion of websites you visit are HTTP vs. HTTPS?",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "permissions": [
       "tabs",
       "storage"
