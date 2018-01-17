@@ -25,7 +25,7 @@ function saveToLocalStorage(websites, httpses, total) {
         httpses: httpses,
         total: total
     }, function() {
-        DEV && console.debug("[HTTPvHTTPS]: Saved options");
+        DEV && console.debug("[http-vs-https]: Saved options");
     });
 }
 
@@ -73,7 +73,7 @@ chrome.runtime.onInstalled.addListener(function(details) {
         chrome.storage.sync.set({
             time: time
         }, function() {
-            DEV && console.debug("[HTTPvHTTPS]: Saved time as " + time);
+            DEV && console.debug("[http-vs-https]: Saved time as " + time);
         });
     }
 });

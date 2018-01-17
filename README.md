@@ -1,4 +1,4 @@
-# HTTP v. HTTPS
+# http-vs-https
 Measure how much of your time you spend on HTTP vs. HTTPS websites.
 
 ### Installation
