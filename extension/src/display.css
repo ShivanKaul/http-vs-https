@@ -1,0 +1,23 @@
+html {
+  background-color: #fff
+}
+
+body {
+    cursor: default;
+    margin-left: 1em;
+    margin-right: 1em;
+    margin-top: 0;
+    margin-bottom: 0;
+    min-width: 20em;
+    font-family: 'Lato';
+    font-size: 75%;
+    color: #303942;
+}
+
+h1 {
+    text-align: center;
+    user-select: none;
+    font-weight: normal;
+    line-height: 1;
+}
+
